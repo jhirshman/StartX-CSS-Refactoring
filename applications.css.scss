@@ -1,0 +1,272 @@
+// Place all the styles related to the Applications controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "globals"
+
+#instructions, #instructions li {
+  line-height: 1.5em;
+  font-size: 16px;
+}
+
+table#industry_options {
+  width: 90%;
+  td {
+    padding-right: 20px;
+    width: auto;
+  }
+}
+
+#industry_other {
+  height: 20px;
+  font-size: 16px;
+  width: 200px !important;
+}
+
+#applications_new, #applications_create {
+  background-color: #f3f0ed;
+  h2 {
+    margin-top: 30px;
+  }
+}
+
+form#new_application, form.edit_application {
+  select {
+    width: 40%;
+  }
+  input[type="text"] {
+    width: 39%;
+  }
+  .control-group.error {
+    margin-bottom: 0px;
+  }
+}
+
+#edit_application {
+  background-color: #f4f0ed;
+  border-bottom: 2px solid #e2dfda;
+}
+
+#application_progress_menu, #application_answer_set {
+  float: left;
+  margin-top: 50px;
+}
+
+#application_progress_menu {
+  width: 25%;
+  padding-right: 2%;
+  padding-bottom: 60px;
+  div#status, div#founder_apps_instructions {
+    font-family: $fontsBitter;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #aca49c;
+    font-style: italic;
+    &.submitted span {
+      color: #0F753E;
+    }
+    &.closed span {
+      color: #800811;
+    }
+  }
+  div#percent_required { 
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-family: $fontsBitter;
+    font-weight: bold;
+    font-size: 24px;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+    a {
+      color: inherit;
+      font-size: inherit;
+      margin-bottom: 0px;
+      font-weight: bold;
+    }
+  }
+  #company_app_progress, .founder_apps_progress {
+    box-shadow: 0.5px 1px 0.5px #afafaf;
+    @include thinTopBorder(#e2ded9);
+    border-left: 1px solid #e2ded9;
+    border-radius: 10px;
+    background-color: #f7f5f3;
+    width: 85%;
+    height: 40px;
+    position: relative;
+    span.value {
+      line-height: 40px;
+      color: #565b6f;
+      font-size: 20px;
+    }
+    span.color_bar {
+      border-radius: 10px;
+      box-shadow: 0.5px 1px 0.5px #afafaf;
+      @include gradient(#b1d6b6, #84c18e);
+    }
+  }
+  .founder_apps_progress {
+    height: 25px;
+    span.value {
+      line-height: 25px;
+      font-size: 18px;
+    }
+  }
+  #company_app_page_navigation, #founder_apps_teammate_navigation {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    a.incomplete {
+      color: #800811;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+  a {
+    display: block;
+    color: #0f753e;
+    &:hover {
+      color: #23B05D;
+    }
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    overflow: wrap;
+  }
+  .btn {
+    height: 50px;
+    width: 85%;
+    font-size: 18.5px;
+  }
+  #founder_apps_teammate_navigation {
+    a {
+      display: inline;
+    }
+    div.founder_info {
+      margin-bottom: 5px;
+    }
+    span.founder_name {
+      font-size: 22px;
+    }
+    span.actions {
+      display: inline;
+      a {
+        font-size: 16px;
+        color: #800811;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+    span.unverified {
+      font-style: italic;
+      font-size: 16px;
+    }
+  }
+}
+
+#application_answer_set {
+  padding-left: 5%;
+  padding-bottom: 20px;
+  width: 67%;
+  font-size: 20px;
+  font-weight: 300;
+  color: #888383;
+  border-left: 2px solid #e9e4de;
+  font-family: $fontsProxima;
+  h1 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #575555;
+    margin-bottom: 50px;
+    float: left;
+  }
+  span.formx_page_number {
+    margin-top: 20px;
+    display: block;
+    float: right;
+  }
+  form {
+    clear: both;
+  }
+  .field {
+    margin-bottom: 25px;
+  }
+  .question_text {
+    line-height: 1em;
+    font-size: 20px;
+    font-weight: 300;
+    color: #4a4a4a;
+    .required {
+      color: red;
+    }
+  }
+  .question_tooltip {
+    font-size: 15px;
+  }
+  input[type="text"], input[type="file"], textarea, select {
+    height: 25px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  select {
+    padding-top: 5px;
+    height: 35px;
+  }
+  input[type="checkbox"] {
+    margin-right: 1%;
+    margin-bottom: 10px;
+  }
+  label.checkbox, label.radio {
+    font-size: 16px;
+    color: inherit;
+    font-weight: inherit;
+  }
+  textarea {
+    height: 150px;
+    resize: none;
+    overflow: auto;
+  }
+  input[type="submit"] {
+    border-radius: 10px;
+    border: 1px solid #c2bcb0;
+    background-color: #f7f5f4;
+    box-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.1); 
+    color: #717372;
+    font-size: 17px;
+    line-height: 18px;
+    margin: 0 2% 0 0;
+    padding: 10px 20px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $fontsProxima;
+    &:hover {
+      box-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.1) inset;
+    }
+  }
+  input[value="Next"], input[value="Previous"] {
+    float: right;
+    &.last_page {
+      float: none;
+    }
+  }
+  input[value="Next"], input[value="Save"] {
+    color: #4c5650;
+    @include gradient(#d1e5d3, #99caa0);
+  }
+  input[value="Save"] {
+    &.last_page {
+      float: right;
+    }
+  }
+  form#invite_form {
+    input[type="text"] {
+      font-size: 24px;
+      height: 45px;
+      margin-top: 0px;
+    }
+  }
+}

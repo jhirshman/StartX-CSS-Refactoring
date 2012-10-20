@@ -1,0 +1,51 @@
+@import "globals";
+
+.mentor_photo {
+  background-color: #ffffff;
+  border: 1px solid #eeecec;
+  border-top: none;
+  border-bottom: 2px solid #eeecec;
+  width: 125px;
+  padding: 7px;
+  height: 75px;
+  img {
+    height: 75px !important;
+  }
+}
+
+.mentor_name {
+  font-family: $fontsProxima;
+  font-size: 14px;
+  color: #23b05d;
+}
+
+.mentor_title, .mentor_company {
+  font-family: $fontsBitter;
+  font-size: 12px;
+}
+
+.mentor_company {
+  font-style: italic;
+  color: #b4ada0;
+}
+
+.mentor_container {
+  padding-top: 15px;
+  @include thinTopBorder(#e1dcd7);
+  padding-bottom: 40px;
+}
+
+table.mentors {
+  width: 100%;
+  tr:first-child td .mentor_container {
+    border-top: none;
+  }
+  td {
+    vertical-align: top;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 25%;
+    padding: 0 3% 0 0;
+  } 
+}

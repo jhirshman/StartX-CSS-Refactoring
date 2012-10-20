@@ -1,0 +1,106 @@
+//for press section on homepage
+
+@import "globals"
+
+.press_quote {
+	display: none;
+	background-color: #f2efeb;
+	border-left: 7px solid #9cd2ee;
+	margin-bottom: 45px;
+	.press_quote_inner {
+		padding: 20px;
+		font-size: 20px;
+		border-right: 1px solid #EAE9E7;
+		border-bottom: 2px solid #EAE9E7;
+		position: relative;
+		overflow: hidden;
+		p {
+			width: 75%;
+			float: left;
+			color: #53514c;
+			line-height: 1em;
+			.press_quote_source {
+				font-size: 12px;
+				font-family: $fontsBitter;
+				color: #bab3a7;
+				font-style: italic;
+			}
+		}
+		.press_link {
+			width: 15%;
+			padding-left: 10%;
+			float: left;
+			font-size: 11px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			a {
+				width: 80%;
+				display: block;
+				text-align: center;
+				border-radius: 8px;
+				@include thinBorder(#bfb8ac);
+				padding: 10px;
+				height: 20%;
+				@include gradient(#eae5df, #dcd5ca);
+			}
+		}
+	}
+}
+
+.press_quote.active {
+	display: block;
+}
+
+#press_carousel {
+	width: 100%;
+	position: relative;
+	margin-bottom: 80px;
+	.press_carousel_nav {
+		cursor: pointer;
+		font-size: 50px;
+		color: #fbf9f9;
+		line-height: 55px;
+		height: 65px;
+		width: 25px;
+		background-color: #d5cec3;
+		position: absolute;
+		top: 0;
+		vertical-align: middle;
+		text-align: center;
+		&.right {
+			right: 0px;
+		}
+		&.left {
+			left: 0px;
+		}
+		&:hover {
+			text-decoration: none;
+			background-color: #23b05d;
+		}
+	}
+	#press_carousel_clip {
+		width: 90%;
+		margin: 0 auto;
+		overflow: hidden;
+		ul#press_logos {
+			margin: 0;
+			position: relative;
+			top: 0;
+			right: 0;
+			list-style: none;
+			width: 142.8%;
+			overflow: hidden;
+			li {
+				img {
+					cursor: pointer;
+					max-height: 65px;
+				}
+				text-align: center;
+				line-height: 65px;
+				width: 8%;
+				padding: 0 1%;
+				float: left;
+			} 
+		}
+	}
+}

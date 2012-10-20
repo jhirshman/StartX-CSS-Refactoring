@@ -1,0 +1,122 @@
+@import "globals";
+
+#dashboard {
+  background-color: #f3f0ed;
+  .container.main.signed_in {
+    padding-bottom: 0;
+    min-height: 0;
+  }
+  border-bottom: 1px solid #e2dfda;
+  .background {
+    position: relative;
+    overflow:hidden;
+    background-color: #ece8e4;
+    width: 100%;
+    height: auto;
+  }
+  a {
+    color: #0f753e;
+    &:hover {
+      color: #23B05D;
+    }
+  }
+  .column {
+    float: left;
+  }
+  .column.one {
+    background-color: #f3f0ed;
+    height: auto;
+    min-height: 275px;
+    width: 62%;
+    padding-right: 3%;
+    .dashboard {
+      h1 {
+        margin-top: 45px;
+        color: #53514c;
+        font-size: 36px;
+        font-weight: bold;
+      }
+      &#founder_applicant_dashboard {
+        h2 {
+          color: #800811;
+          font-size: 22px;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
+        h3 {
+          color: #93877c;
+          font-size: 24px;
+          font-weight: bold;
+          margin: 40px 0 20px;
+        }
+        .application_summary {
+          table {
+            width: 80%;
+            font-size: 18px;
+            border-bottom: 2px solid #d9d1c6;
+            margin-bottom: 35px;
+            tr.first td {
+              padding-bottom: 15px;
+            }
+            td.app_company_name {
+              color: #53514c;
+              font-size: 22px;
+              width: 40%;
+            }
+            td.app_session_key {
+              color: #b4b3b1;
+              font-style: italic;
+            }
+            td.app_status {
+              text-align: right;
+              font-family: "Bitter", serif;
+              &.submitted {
+                color: #0f753e;
+              }
+              &.closed {
+                color: #800811;
+              }
+              &.in_progress {
+                color: #7a7d7b;
+              }
+            }
+            td.app_founders {
+              color: #53514c;
+            }
+            td.app_actions {
+              text-align: right;
+              a.app_remove {
+                color: #800811;
+                &:hover {
+                  color: red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .column.two {
+    background-color: #ece8e4;
+    width: 30%;
+    padding: 0 2.5%;
+    #dashboard_links {
+      margin-top: 50px;
+    }
+    #founder_applicant_sidebar {
+      font-size: 14px;
+      color: #2a2727;
+      h2 {
+        font-family: $fontsBitter;
+        font-size: 17px;
+        color: #222120;
+        margin-top: 100px;
+        margin-bottom: 5px;
+      }
+      span.app_deadline {
+        color: #800811;
+      }
+    }
+  }
+}

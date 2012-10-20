@@ -1,0 +1,107 @@
+@import "globals"
+
+.navbar {
+	border-top: 5px solid #23b05d;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	min-width: 800px;
+	border-bottom: 1px solid #c9d0da;
+	position: fixed;
+	width: 100%;
+	z-index: 200;
+	
+	.home {
+		margin-bottom: 0px;
+	}
+	
+	.unstick {
+		position: relative;
+	}
+	
+	.navbar-inner {
+		background: #ffffff;
+		background: rgba(#ffffff, 0.5);
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7fffffff, endColorstr=#7fffffff)";
+		filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#7fffffff', EndColorStr='#7fffffff'); 
+		background-image: none;
+		box-shadow: none;
+		padding: 0 0 30px 0;
+		border-bottom: 1px solid #afb5be;
+		border-radius: 0;
+		text-align: right;
+		.container {
+			padding-top: 10px;
+		}
+	}
+	
+	.brand {
+		padding: 0px;
+		margin-left: 9.13%;
+		width: 140px;
+		height: 50px;
+	}
+	
+	.nav {
+		> li > a {
+			color: #FBF9F9;
+			font-family: $fontsProxima;
+			font-size: 11px;
+			font-weight: 300;
+			text-transform: uppercase;
+			padding: 7px 12px;
+			letter-spacing: 2px;
+			text-shadow: none;
+		}
+		> li > a:hover {
+			color: #000000;
+			background-color: #c8c2b9;
+		}
+		> li.first > a:hover {
+			border-radius: 10px 0 0 10px;
+		}
+		> li.last > a:hover {
+			border-radius: 0 10px 10px 0;
+		}
+		background-color: #c2bbb1;
+		border-radius: 10px;
+		margin-top: 16px;
+		margin-right: 9.13%;
+		float: right;
+		
+		.signed-in {
+			margin-top: 5px;
+		}
+	}
+
+.navbar .nav {
+		> li > a {
+			color: #FBF9F9;
+			font-family: $fontsProxima;
+			font-size: 11px;
+			font-weight: 300;
+			text-transform: uppercase;
+			padding: 7px 12px;
+			letter-spacing: 2px;
+			text-shadow: none;
+		}
+		> li > a:hover {
+			color: #000000;
+			background-color: #c8c2b9;
+		}
+		> li.first > a:hover {
+			border-radius: 10px 0 0 10px;
+		}
+		> li.last > a:hover {
+			border-radius: 0 10px 10px 0;
+		}
+		background-color: #c2bbb1;
+		border-radius: 10px;
+		margin-top: 16px;
+		margin-right: 9.13%;
+		float: right;
+}
+
+.navbar .nav.signed-in {
+	margin-top: 5px;
+}
+

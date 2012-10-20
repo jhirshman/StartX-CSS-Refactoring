@@ -1,0 +1,122 @@
+//styles for homepage 
+@import "globals"
+
+.home {
+	section {
+		border-bottom: 1px solid #e1ddd8;
+		.top {
+			padding-top: 98px;
+		}
+	}
+
+	ul {
+		display: block;
+		width: 100%;
+		position: relative;
+		list-style: none outside none;
+		margin: 0;
+		padding-bottom: 130px;
+		
+		.quotes {
+			padding-bottom: 0px;
+		}
+		
+		overflow: hidden;
+		li {
+			display: block;
+			position: relative;
+			float: left;
+			width: 31.90%;
+			
+			p {
+				font-size: 14px;
+			}
+			
+			img {
+				height: 45px;
+				margin-bottom: 10px;
+			}
+			
+			.center {
+				margin: 0 2.15%;
+			}
+			
+			.quotes {
+				height: 100%;
+				.quote {
+					height: 100%;
+					border-top: 5px solid #9bd2f1;
+					margin-bottom: 30px;
+					.quote_box {
+						height: 100%;
+						p {
+							margin-bottom: 0;
+							&.quote_source {
+								margin-top: 25px;
+							}
+						}
+					}
+					background-color: #FFFFFF;
+					@include thinBorder(#eae9e7);
+					border-bottom-color: #d2d0cf;
+					border-top: none;
+					padding: 20px 15px;
+					position: relative;
+					.quote_source_name {
+						color: #53514c;
+						font-family: $fontsProxima;
+					}
+					.quote_source_title {
+						color: #b4ada0;
+						font-family: $fontsBitter;
+						font-style: italic;
+						font-size: 12px;
+					}
+
+					@mixin quoteTriangleCommon() {
+						width: 0;
+						height: 0;
+						position: absolute;
+						left: 15px;
+						border: 10px solid transparent;
+						border-color: transparent;
+						border-style: solid;
+						border-width: 10px;
+					}
+				
+					.quote_triangle_border {
+						@include quoteTriangleCommon();
+						bottom: -21px;
+						border-color-top: #d2d0cf;
+					}
+					.quote_triangle {
+						@include quoteTriangleCommon();
+						bottom: -19px;
+						border-color-top: #FFFFFF;
+					}
+				}
+			}	
+		}
+	}
+}
+
+ul.home_with_button {
+	padding-bottom: 35px;
+}
+
+.home_text {
+	width: 77.66%;
+	border-top: 10px solid #dddad4;
+	padding-top: 65px;
+	h2 {
+		font-family: $fontsBitter;
+		font-weight: 700;
+		font-size: 36px;
+		color: #53514c;
+		margin-bottom: 15px;
+	}
+	p {
+		margin-bottom: 30px;
+	}
+	margin-bottom: 55px;
+}

@@ -1,0 +1,25 @@
+@import "globals"
+
+ul#partners.home {
+	padding-bottom: 45px;
+	li {
+		text-align: center;
+		background-color: #FFFFFF;
+		height: 180px;
+		vertical-align: middle;
+		@include thinBorder(#eeecec);
+		border-bottom-width: 2px;
+		border-top: none;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		line-height: 180px;
+	}
+	li:hover {
+		background-color: #ebf6fc;
+	}
+	img {
+		width: 75%;
+		height: 60%;
+	}
+}

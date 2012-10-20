@@ -1,0 +1,77 @@
+@import "globals";
+
+.navbar.signed_in {
+  .navbar-inner {
+    padding-bottom: 25px;
+  }
+  .brand {
+    margin-top: 5px;
+  }
+  .navbar-inner .container span#user_controls {
+    font-size: 14px;
+    margin-right: 9.13%;
+  }
+  .nav {
+    margin-top: 0;
+  }
+  .dropdown-menu li {l
+    text-align: left;
+  }
+  .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+    @include gradient(#23b05d, #0f753e);
+  }
+}
+
+.navbar.signed_in.backend {
+  position: relative;
+  margin-bottom: 0;
+  font-family: "Bitter", serif;
+  .brand {
+    margin-top: 0;
+  }
+  border-bottom: none;
+  .navbar-inner {
+    border-bottom: none;
+    padding-bottom: 32px;
+  }
+  span#branding {
+    display: block;
+    float: left;
+    margin-top: 22.5px;
+    margin-left: 20px;
+    margin-right: 0px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #09713a;
+  }
+  div#user_controls_menu {
+    float: right;
+    text-align: right;
+    margin-right: 9.13%;
+    max-width: 40%;
+    font-size: 14px;
+    span#user_controls {
+      margin-top: 10px;
+      display: block;
+    }
+    a {
+      font-weight: bold;
+      color: #0F753E;
+      &:hover {
+        color: #23B05D;
+      }
+    }
+    .dropdown-menu li a {
+      color: #333333;
+      font-weight: normal;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.container.main.signed_in {
+  padding-top: 0px;
+  min-height: 0;
+}

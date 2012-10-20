@@ -1,0 +1,45 @@
+@import "globals"
+
+#blog_feed {
+  font-style: italic;
+  h2, h3 {
+    font-family: inherit;
+    line-height: 14px;
+    color: inherit;
+    font-size: inherit;
+    font-style: normal;
+  }
+  h2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 15px;
+  }
+  h3 {
+    color: #f7f5f3;
+    display: inline;
+  }
+  .post_author, .post_date {
+    color: #989088;
+    font-style: normal;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  a, a:hover {
+    color: #FFFFFF;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  padding-top: 20px;
+  float: left;
+  width: 48.83%;
+  #more {
+    a, a:hover {
+      color: #23b05d;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-style: normal;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// Place all the styles related to the Companies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "globals";
+
+table.portfolio {
+  margin-bottom: 30px;
+  tr {
+	@include thinTopBorder(#e1dcd7);
+    &:first-child {
+      border: none;
+    }
+  }
+  td {
+    padding: 20px 10px 40px;
+    vertical-align: middle;
+  }
+  td.logo {
+    text-align: center;
+    width: 150px;
+  }
+  a {
+    color: #23B05D;
+    &:hover {
+      color: #53514c;
+      text-decoration: none;
+    }
+  }
+  h3 {
+    font-size: 16px;
+  }
+}

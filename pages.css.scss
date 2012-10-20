@@ -1,0 +1,22 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "globals";
+
+p.announcement {
+  text-align: center;
+  line-height: 1.5em;
+  font-family: $fontsProxima;
+  font-size: 21px;
+  a {
+    color: #23B05D;
+    &:hover {
+      color: #53514c;
+      text-decoration: none;
+    }
+  }
+}
+p#applications_open {
+  font-size: 25px;
+}

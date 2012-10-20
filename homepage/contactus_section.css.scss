@@ -1,0 +1,86 @@
+@import "globals"
+
+@mixin contactInput() {
+	font-family: inherit;
+	font-size: 18px;
+	border-radius: 10px;
+}
+
+section#contact_us {
+  background: url("textured_background.png") repeat scroll 0 -5px transparent;
+  border: none;
+  color: #f7f5f3;
+  padding-bottom: 65px;
+  overflow: hidden;
+  .home_text {
+    border: none;
+    h2 {
+      color: inherit;
+      font-size: 24px;
+    }
+  }
+  form#contact {
+    float: left;
+    position: relative;
+    width: 40.87%;
+    margin-right: 10.03%;
+    font-family: $fontsProxima;
+    p {
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    label {
+      width: 20%;
+      font-size: 16px;
+      display: block;
+      float: left;
+    }
+    select {
+      font-family: inherit;
+      width: 70%;
+      float: left;
+      color: #706d67;
+      font-size: 16px;
+      border-radius: 10px;
+      height: 35px;
+      padding: 5px;
+    }
+    input[type="email"], input[type="text"], textarea {
+      @include contactInput();
+      clear: both;
+      color: #7a766e;
+      width: 90%;
+      padding: 15px 0px 15px 15px;
+    }
+    input[type="email"], input[type="text"] {
+      height: 15px;
+    }
+    input#contact_phone_number {
+      display: none;
+    }
+    textarea {
+      height: 65px;
+      resize: none;
+      overflow: auto;
+    }
+    input[type="submit"] {
+      @include contactInput();
+      text-transform: uppercase;
+      padding: 15px;
+      font-weight: 500;
+      width: 100px;
+      border: none;
+    }
+  }
+  #contact_location {
+    float: left;
+    position: relative;
+    display: block;
+    width: 48.83%;
+    img {
+      width: 100%;
+      height: 260px;
+      margin-bottom: 10px;
+    }
+  }
+}

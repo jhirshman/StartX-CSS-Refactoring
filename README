@@ -1,0 +1,45 @@
+The purpose of this project was to refactor the CSS files for the StartX website.  http://www.startx.stanford.edu
+
+First, the plan for this project:
+Task 1: Familiarize myself with SCSS and Twitter Bootstrap (~30min)
+Task 2: Set up working environment with syntax highlighting for editing purposes (~20min)
+Task 3: Familiarize myself with the startx website and html structure (~10min)
+Task 4: Read and fully comprehend code and structure of existing CSS (~30min)
+Task 5: Find code that is duplicated and that can be easily replaced with a variable or mix-in (~30min)
+Task 6: Work through the homepage and re-write some of the CSS to optimize
+Task 7: Work through other pages as well working to optimize the CSS
+(Tasks 6 and 7 should take the longest and be where most of the work occurs)
+
+Reflection on the plan:
+As I will describe below, I ended up focusing most of my efforts on reorganizing the homepage and the core styles.  I made this choice for reasons of scalability.  I found that it took longer than I expected to work through a lot of the CSS.  Part of the problem is that without setting up the full Rails environment, it is hard to experiment with changing pieces of the code.  Therefore, I felt constrained in the sense that I felt like I couldn't change any lines of code because it would be hard to the full impact that change would have absent actually running the website.  Anyway, in my time working on this project, I did accomplish a reorganization of the core style code including the segmentation of the css into files that are only relevant to specific portions of the site.
+
+RESULTS:
+
+Summary of Changes:
+
+1) Added _globals file and incoporated its contents into other documents.  This file contains global mix-ins and variables that should be imported into every scss document.  For now, the file does not contain much, but that was because I couldn't find that many areas of repetitious code.  That said, it does take advantage of the SASS features to remove some redundancy.
+a) Defines variables for the list of font families, so that they can be changed en masse in the future
+b) Creates a mix-in for a solid 1px border to make sure that code is only written once (I noticed that a lot of solid 1px borders were being created).  The mix-in takes the color of the border as an argument
+c) Creates a mix-in for a gradient.  This mix-in takes two colors as arguments, the top color and the bottom color.  It then spits out all of the compatability properties necessary for the gradient.  This is probably the best use I found for mix-ins because it means that you will never have to write gradient code again.
+
+The advantage to the _globals file is that it will make the website easier to maintain as it grows.  More variables that are defined wtih global scope and applied throughout the document will make it easier batch changes later (e.g. say you want to change the font-family).
+
+2) Separated the Twitter Bootstrap import in less from the style override code.  As the code was designed previously, you were defining styles in the same document as the twitter bootstrap call as though those styles were special since they were made to override bootstrap.  However, I think that those styles should not be treated as special because in effect, every user defined style indirectly overrides the original bootstrap look of the site.  Therefore, the newly-named bootstrap.css.less just contains the calls to import twitter bootstrap.  The styles that were defined previously in that document were distributed based on function to various other documents.
+
+3) Created coreStyles.css.scss with the core style definitions for the site.  Some of those styles that used to be in the twitter bootstrap less file had a very broad scope and applied to almost every webpage.  Therefore, they belong in the coreStyles stylesheet.   Separating out stylesheets based on scope should make it easier when writing code in the future to figure out which styles a particular div should have access to.
+
+4) Seperated out homepage styles into various stylesheets.  I created a homepage folder that contains stylesheets for various sections of the homepage as well as a stylesheet (home.css.scss) that controls the main styles of the homepage.  Once again, separating by scope is advantageous.  The scope of the folder is one web page and the scope of each file is one section (literally an html5 section)
+
+5) Seperated out code for components that are common throughout website (footer, forms, navbar).
+
+<note: in addition to placing things in different files, I also combed through all of the documents I mentioned above and checked for redundancies.  I also reindented and re-formatted many of the documents to take advantage of SASS's ability to nest tags>
+
+Unfortunately, I didn't get the chance to go through the application controllers.  In part there was a concious choice not to look at those for two reasons.  One, I read through them and couldn't find that many problems with them.  Two, as the website grows what is more important is the styles that are shared across the site, so those are the onces I focused on refactoring.
+
+
+Final thought, in order to do this properly and more thouroughly, it would be better to have a server up and running to test changes that were being made.  It could be the case that in the process of refactoring I missed a semicolon or two which is something I couldn't catch absent compiling and watching the code run.  Additionally, more substantive changes are easier to make when you can see the changes reflected immediately on the site.  The anticipation that this refactoring would have to be reworked by someone with a running server led me to not worry at the moment about changing up the HTML code or suggesting class changes because making those changes now would just lead to confusion if the process had to be reworked.
+
+
+Thank you again for the opportunity to apply for this position.  I look forward to hearing back from you on Sunday.
+
+- Jason Hirshman

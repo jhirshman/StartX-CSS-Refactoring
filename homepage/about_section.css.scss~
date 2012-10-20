@@ -1,0 +1,44 @@
+
+@import "globals";
+
+
+section#about {
+	h2#tagline {
+		text-align: center;
+		font-size: 21px;
+		margin-bottom: 30px;
+	}
+
+	div.see_more {
+		@include thinTopBorder(#e1dcd7);
+		padding-top: 1px;
+		padding-bottom: 60px;
+		div {
+			@include thinTopBorder(#e1dcd7);
+			text-align: center;
+			span {
+				color: #ccc7bf;
+				font-style: italic;
+			}
+		}
+		a, a:hover {
+			color: #B70101;
+			display: block;
+			width: 195px;
+			margin: -3px auto 0;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 13px;
+			font-family: $fontsProxima;
+			font-weight: 500;
+			padding: 8px 5px;
+			border-radius: 0 0 10px 10px;
+			@include gradient(#fbf9f9, #e1dc7);
+			
+			section.even {
+				@include gradient(#e1dc7, #fbf9f9);
+			}
+		}
+	}
+}

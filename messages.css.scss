@@ -1,0 +1,17 @@
+@import "globals";
+
+#messages {
+  position: absolute;
+  top: 98px;
+  z-index: 100;
+  width: 99.9%;
+  .alert .close {
+    right: 10px;
+  }
+}
+
+#messages, #messages .alert, #messages .alert #flash_alert {
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}

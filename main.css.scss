@@ -1,0 +1,106 @@
+@import "globals"
+
+body {
+	color: #706d67;
+	background-color: #fbf9f9;
+	font-family: $fontsProxima;
+	font-size: 16px;
+}
+
+strong {
+	font-family: $fontsProxima;
+	font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $fontsProxima;
+	font-weight: 500;
+}
+
+h1 {
+	margin-bottom: 30px;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+a {
+	color: #23b05d;
+}
+
+a:hover {
+	color: #53514c;
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 30px;
+}
+
+hr {
+	border-top: 10px solid #dddad4;
+	border-bottom: none;
+	margin: 0;
+	width: 77.66%;
+}
+
+.container.main {
+	padding-top: 115px;
+	padding-bottom: 30px;
+	min-height: 600px;
+}
+
+.inner_container {
+	margin: 0 9.13%;
+}
+
+section {
+	min-width: 1100px; 
+}
+
+section.even { 
+	background-color: #f7f5f3;
+}
+
+#account_settings {
+	width: 60%;
+}
+
+.alert {
+	margin-bottom: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+.subtext {
+	font-family: $bitterFonts;
+	font-size: 12px;
+	color: #b4ada0;
+	font-style: italic;
+}
+
+h3.featured_mentor, h3.featured_company {
+	color: #23b05d;
+	font-size: 15px;
+}
+
+span.mentor_title, span.mentor_company {
+	display: block
+}
+
+span.mentor_company {
+	color: #b4ada0;
+	font-style: italic; 
+}
+
+
+// @import "twitter/bootstrap/responsive";
+
+// Header responsive override styles
+
+.container, .navbar .container {
+	width: 1150px;
+	max-width: 75%;
+	min-width: 1100px;
+}
